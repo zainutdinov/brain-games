@@ -2,6 +2,7 @@
 
 import prompt
 import random
+import math
 
 
 def hello():
@@ -56,4 +57,15 @@ def logic_games(game_name):
 
                 if not checking_answer(answer_user, correct_answer, name):
                     return
+        case 'brain_gcd':
+            print('Find the greatest common divisor of given numbers.')
+            for _ in range(3):
+                random_number_1 = random.randint(1, 100)
+                random_number_2 = random.randint(1, 100)
+                correct_answer = str(math.gcd(random_number_1, random_number_2))
+                print(f'Question: {random_number_1} {random_number_2}')
+                answer_user = prompt.string('Your answer: ')
+
+                if not checking_answer(answer_user, correct_answer, name):
+                        return
     successful_game(name)

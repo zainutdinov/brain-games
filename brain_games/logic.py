@@ -68,4 +68,23 @@ def logic_games(game_name):
 
                 if not checking_answer(answer_user, correct_answer, name):
                         return
+        case 'brain_progression':
+            print('What number is missing in the progression?')
+            for _ in range(3):
+                progression = []
+                finish_progression = random.randint(5, 10)
+                progression_step = random.randint(1, 10)
+                element = random.randint(1, 10)
+                progression.append(element)
+                for _ in range(finish_progression + 1):
+                    element += progression_step
+                    progression.append(element)
+                hidden_element_id = random.randint(0, len(progression) - 1)
+                correct_answer = str(progression[hidden_element_id])
+                progression[hidden_element_id] = '..'
+                print(f'Question: {' '.join(map(str, progression))}')
+                answer_user = prompt.string('Your answer: ')
+
+                if not checking_answer(answer_user, correct_answer, name):
+                        return       
     successful_game(name)

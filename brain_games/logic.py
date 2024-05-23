@@ -5,6 +5,7 @@ import random
 import math
 
 
+# Приветствие пользователя и сохранение имени
 def hello():
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
@@ -12,25 +13,28 @@ def hello():
     return name
 
 
+# Проверка ответа на корректность
 def checking_answer(answer_user, correct_answer, name):
     if answer_user == correct_answer:
-            print('Correct!')
-            return True
+        print('Correct!')
+        return True
     else:
         print(f"'{answer_user}' is wrong answer ;(. "
-            f"Correct answer was '{correct_answer}'.")
+              f"Correct answer was '{correct_answer}'.")
         print(f"Let's try again, {name}!")
         return False
 
 
+# Отправка сообщения в случае успешного завершения игры
 def successful_game(name):
-     print(f'Congratulations, {name}!')
-     
+    print(f'Congratulations, {name}!')
 
+
+# Логика всех игр
 def logic_games(game_name):
     name = hello()
     match game_name:
-        case 'brain_calc':
+        case 'brain_calc':  # Игра: «Калькулятор»
             print('What is the result of the expression?')
             for _ in range(3):
                 operators = ['+', '-', '*']
@@ -41,10 +45,10 @@ def logic_games(game_name):
                 correct_answer = str(eval(question))
                 print(f'Question: {question}')
                 answer_user = prompt.string('Your answer: ')
-                
+
                 if not checking_answer(answer_user, correct_answer, name):
                     return
-        case 'brain_even':
+        case 'brain_even':  # Игра: «Проверка на чётность»
             print('Answer "yes" if the number is even, otherwise answer "no".')
             for _ in range(3):
                 random_number = random.randint(1, 100)
@@ -57,7 +61,7 @@ def logic_games(game_name):
 
                 if not checking_answer(answer_user, correct_answer, name):
                     return
-        case 'brain_gcd':
+        case 'brain_gcd':  # Игра «НОД» (наибольший общий делитель)
             print('Find the greatest common divisor of given numbers.')
             for _ in range(3):
                 random_number_1 = random.randint(1, 100)
@@ -67,8 +71,8 @@ def logic_games(game_name):
                 answer_user = prompt.string('Your answer: ')
 
                 if not checking_answer(answer_user, correct_answer, name):
-                        return
-        case 'brain_progression':
+                    return
+        case 'brain_progression':  # Игра «Арифметическая прогрессия»
             print('What number is missing in the progression?')
             for _ in range(3):
                 progression = []
@@ -86,5 +90,20 @@ def logic_games(game_name):
                 answer_user = prompt.string('Your answer: ')
 
                 if not checking_answer(answer_user, correct_answer, name):
-                        return       
+                    return
+        case 'brain_prime':  # Игра «Простое ли число?»
+            print('Answer "yes" if given number is prime. Otherwise answer "no".')
+            for _ in range(3):
+                random_number = random.randint(1, 100)
+                n = 2
+                while random_number % n != 0:
+                    n += 1
+                if random_number == n:
+                    correct_answer = 'yes'
+                else:
+                    correct_answer = 'no'
+                print(f'Question: {random_number}')
+                answer_user = prompt.string('Your answer: ')
+                if not checking_answer(answer_user, correct_answer, name):
+                    return
     successful_game(name)

@@ -104,6 +104,7 @@ def logic_games(game_name):
                     correct_answer = 'no'
                 print(f'Question: {random_number}')
                 answer_user = prompt.string('Your answer: ')
+
                 if not checking_answer(answer_user, correct_answer, name):
                     return
     successful_game(name)

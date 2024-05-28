@@ -2,3 +2,4 @@
 .venv
 dist/
 demo.cast
+__pycache__

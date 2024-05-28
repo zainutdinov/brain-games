@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 import random
 from ..general_logic import hello, checking_answer, successful_game
 

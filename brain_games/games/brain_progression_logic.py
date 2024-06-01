@@ -1,24 +1,24 @@
 import random
-from ..general_logic import hello, checking_answer, successful_game
+
+task = 'What number is missing in the progression?'
 
 
-def brain_progression_game():
-    name = hello()
-    print('What number is missing in the progression?')
-    for _ in range(3):
-        progression = []
-        finish_progression = random.randint(5, 10)
-        progression_step = random.randint(1, 10)
-        element = random.randint(1, 10)
-        progression.append(element)
-        for _ in range(finish_progression + 1):
-            element += progression_step
-            progression.append(element)
-        hidden_element_id = random.randint(0, len(progression) - 1)
-        correct_answer = str(progression[hidden_element_id])
-        progression[hidden_element_id] = '..'
-        question = f'{' '.join(map(str, progression))}'
+def progression_generation():
+    progression = []
+    finish_progression = random.randint(5, 10)
+    progression_step = random.randint(1, 10)
+    element = random.randint(1, 10)
+    progression.append(str(element))
+    for _ in range(finish_progression + 1):
+        element += progression_step
+        progression.append(str(element))
+    return progression
 
-        if not checking_answer(question, correct_answer, name):
-            return
-    successful_game(name)
+
+def game_logic():
+    progression = progression_generation()
+    hidden_element_id = random.randint(0, len(progression) - 1)
+    correct_answer = progression[hidden_element_id]
+    progression[hidden_element_id] = '..'
+    question = ' '.join(progression)
+    return question, correct_answer

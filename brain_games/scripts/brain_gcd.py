@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 
-from ..games.brain_gcd_logic import brain_gcd_game
+from brain_games.constants import COUNT_ROUND
+from brain_games.general_logic import launching_the_game
+from brain_games.games.brain_gcd_logic import task
+import brain_games.games.brain_gcd_logic
 
 
 def main():
-    brain_gcd_game()
+    launching_the_game(task, COUNT_ROUND, brain_games.games.brain_gcd_logic)
 
 
 if __name__ == '__main__':

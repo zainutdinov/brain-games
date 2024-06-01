@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 
-from ..games.brain_progression_logic import brain_progression_game
+from brain_games.constants import COUNT_ROUND
+from brain_games.general_logic import launching_the_game
+from brain_games.games.brain_progression_logic import task
+import brain_games.games.brain_progression_logic
 
 
 def main():
-    brain_progression_game()
+    launching_the_game(task, COUNT_ROUND, brain_games.games.brain_progression_logic)
 
 
 if __name__ == '__main__':

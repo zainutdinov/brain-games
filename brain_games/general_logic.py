@@ -34,7 +34,7 @@ def successful_game(name):
 def launching_the_game(task, COUNT_OF_GAME_ROUND, game):
     name = welcome_and_asking_question(task)
     for _ in range(COUNT_OF_GAME_ROUND):
-        question, correct_answer = game.game_logic()
+        question, correct_answer = game()
         if not checking_answer(question, correct_answer, name):
             return
     successful_game(name)

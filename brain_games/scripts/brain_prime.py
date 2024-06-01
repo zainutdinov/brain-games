@@ -3,11 +3,11 @@
 from brain_games.constants import COUNT_ROUND
 from brain_games.general_logic import launching_the_game
 from brain_games.games.brain_prime_logic import task
-import brain_games.games.brain_prime_logic
+from brain_games.games.brain_prime_logic import game_logic_prime
 
 
 def main():
-    launching_the_game(task, COUNT_ROUND, brain_games.games.brain_prime_logic)
+    launching_the_game(task, COUNT_ROUND, game_logic_prime)
 
 
 if __name__ == '__main__':

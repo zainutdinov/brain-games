@@ -15,7 +15,7 @@ def progression_generation():
     return progression
 
 
-def game_logic():
+def game_logic_progression():
     progression = progression_generation()
     hidden_element_id = random.randint(0, len(progression) - 1)
     correct_answer = progression[hidden_element_id]

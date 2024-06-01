@@ -10,8 +10,7 @@ def is_prime(random_number):
     return 'yes' if random_number == n else 'no'
 
 
-def game_logic():
+def game_logic_prime():
     random_number = random.randint(1, 100)
     correct_answer = is_prime(random_number)
-    question = random_number
-    return question, correct_answer
+    return random_number, correct_answer

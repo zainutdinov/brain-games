@@ -4,7 +4,7 @@ import operator
 task = 'What is the result of the expression?'
 
 
-def game_logic():
+def game_logic_calc():
     operators = ['+', '-', '*']
     random_operator = random.choice(operators)
     random_num_1 = random.randint(1, 100)

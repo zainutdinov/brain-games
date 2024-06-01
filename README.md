@@ -49,7 +49,7 @@ git clone https://github.com/zainutdinov/python-project-49
 > Далее выполните установку пакета:
 
 ```bash
-cd math-brain-games
+cd python-project-49
 ```
 
 ```bash

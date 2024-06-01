@@ -1,12 +1,21 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = ""
+description = "«Игры разума» — набор из пяти консольных игр, построенных по принципу популярных мобильных приложений для прокачки мозга."
 authors = ["Анатолий Зайнутдинов <zainutdinov.aaa@gmail.com>"]
 readme = "README.md"
 repository = "https://github.com/zainutdinov/python-project-49"
 packages = [
   { include = "brain_games" },
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "Natural Language :: Russian",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Topic :: Games/Entertainment :: Puzzle Games",
 ]
 
 [tool.poetry.dependencies]

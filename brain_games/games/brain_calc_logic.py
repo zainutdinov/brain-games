@@ -1,10 +1,12 @@
 import random
 import operator
+from brain_games.constants import COUNT_ROUND
+from brain_games.general_logic import launching_the_game
 
 task = 'What is the result of the expression?'
 
 
-def game_logic_calc():
+def game_calc_logic():
     operators = ['+', '-', '*']
     random_operator = random.choice(operators)
     random_num_1 = random.randint(1, 100)
@@ -19,3 +21,7 @@ def game_logic_calc():
             correct_answer = operator.mul(random_num_1, random_num_2)
     correct_answer = str(correct_answer)
     return question, correct_answer
+
+
+def launch_game_calc():
+    launching_the_game(task, COUNT_ROUND, game_calc_logic)

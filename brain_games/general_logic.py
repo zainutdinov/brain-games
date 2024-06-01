@@ -31,9 +31,9 @@ def successful_game(name):
 
 
 # Запуск игры
-def launching_the_game(task, COUNT_OF_GAME_ROUND, game):
+def launching_the_game(task, COUNT_ROUND, game):
     name = welcome_and_asking_question(task)
-    for _ in range(COUNT_OF_GAME_ROUND):
+    for _ in range(COUNT_ROUND):
         question, correct_answer = game()
         if not checking_answer(question, correct_answer, name):
             return

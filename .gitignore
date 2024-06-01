@@ -3,4 +3,4 @@
 dist/
 demo.cast
 __pycache__
-__pycache__/
+brain_games/__pycache__

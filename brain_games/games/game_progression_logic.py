@@ -1,11 +1,7 @@
 import random
-from brain_games.constants import COUNT_ROUND
-from brain_games.general_logic import launching_the_game
-
-task = 'What number is missing in the progression?'
 
 
-def progression_generation():
+def generate_progression():
     progression = []
     finish_progression = random.randint(5, 10)
     progression_step = random.randint(1, 10)
@@ -17,14 +13,10 @@ def progression_generation():
     return progression
 
 
-def game_progression_logic():
-    progression = progression_generation()
+def create_progression_question():
+    progression = generate_progression()
     hidden_element_id = random.randint(0, len(progression) - 1)
     correct_answer = progression[hidden_element_id]
     progression[hidden_element_id] = '..'
     question = ' '.join(progression)
     return question, correct_answer
-
-
-def launch_game_progression():
-    launching_the_game(task, COUNT_ROUND, game_progression_logic)

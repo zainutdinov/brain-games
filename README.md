@@ -2,9 +2,6 @@
 <h1>Игры разума / Brain games</h1>
 </div>
 
-### CodeClimate Badges
-[![Maintainability](https://api.codeclimate.com/v1/badges/ed9c40c9e61ca711284f/maintainability)](https://codeclimate.com/github/zainutdinov/python-project-49/maintainability)
-
 ## Описание проекта
 
 **«Игры разума»** — набор из пяти консольных игр, построенных по принципу популярных мобильных приложений для прокачки мозга. Каждая игра задает вопросы, на которые нужно дать правильные ответы. После трех правильных ответов считается, что игра пройдена. Неправильные ответы завершают игру и предлагают пройти ее заново. 

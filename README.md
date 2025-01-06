@@ -1,9 +1,6 @@
 <div align="center">
-<h1>Игры разума</h1>
+<h1>Игры разума / Brain games</h1>
 </div>
-
-### Hexlet tests and linter status
-[![Actions Status](https://github.com/zainutdinov/python-project-49/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/zainutdinov/python-project-49/actions)
 
 ### CodeClimate Badges
 [![Maintainability](https://api.codeclimate.com/v1/badges/ed9c40c9e61ca711284f/maintainability)](https://codeclimate.com/github/zainutdinov/python-project-49/maintainability)
@@ -43,13 +40,13 @@ python --version
 > Чтобы использовать пакет, вам нужно скопировать репозиторий на свой компьютер. Это делается с помощью команды ``git clone``:
 
 ```bash
-git clone https://github.com/zainutdinov/python-project-49
+git clone https://github.com/zainutdinov/brain-games
 ```
 
 > Далее выполните установку пакета:
 
 ```bash
-cd python-project-49
+cd brain-games
 ```
 
 ```bash
